@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> DEAD AND WOUNDED NUMBERS (DAWN) </title>
+    <link href="DAWN.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
+</head>
+
+<body>
+
+          <div class="top">
+              <h1 class="title-intro"> Dead And Wounded Numbers</h1>
+              <a href="https://dawngame.netlify.app"> <i class="uil uil-arrow-left icon"></i> Go back home</a>
+              <br>
+          </div>
+
+            <main>
+          
+              <div class="form">
+                <label for="guessField" autocomplete="off">Enter a guess: </label>
+                <!-- <input type="text" id="guessField" class="guessField"> -->
+                <input autocomplete="off" autocomplete="false" type="text" maxlength="1" minlength="1" size="1" id="number001" class="number001" onkeyup="jump001(this, 'number002')" />
+                <input autocomplete="off" autocomplete="false" type="text" maxlength="1" minlength="1" size="1" id="number002" class="number002" onkeyup="jump001(this, 'number003')" />
+                <input autocomplete="off" autocomplete="false" type="text" maxlength="1" minlength="1" size="1" id="number003" class="number003" onkeyup="jump001(this, 'number004')" />
+                <input autocomplete="off" autocomplete="false" type="text" maxlength="1" minlength="1" size="1" id="number004" class="number004" onkeyup="jump001(this, 'number001')" />
+                <input id= "submit" type="submit" value="Submit guess" class="guessSubmit">
+                
+              
+                
+              <div class="resultParas">
+                <br> 
+                <p class="guesses"></p>
+                <br>   <!--this is causing the line breaks in guesses history(js) to not happen because it insists on putting it in a paragraph-->
+                <p class="lastResult"></p>
+                <br><br> 
+                <p id="turnsLeft"></p>
+                <!-- <p class="lowOrHi"></p> -->
+                <!-- <label class="turnsLeft"></label> -->
+              </div>
+            
+            </div>      
+        
+          
+            </main>
+     
+    
+
+    <script src="DAWN.js"></script> 
+    
+</body>
+</html>
+
+  <!-- <input placeholder="Result..." class="input__result" id="result1">  -->

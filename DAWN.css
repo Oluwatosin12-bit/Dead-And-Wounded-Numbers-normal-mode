@@ -1,0 +1,316 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Poppins:wght@400;500;600&display=swap'); */
+/* @import url('https://www.fontspace.com/account/collections'); */
+/* @import url('https://www.fontspace.com/category/creepy?p=11');  */
+@font-face {
+    font-family: GypsyCurse-epqximport;
+    src: url("GypsyCurse-epqx1.ttf");
+}
+
+
+/* ========= VARIABLE CSS ======== */
+:root{
+
+     /*=========== Colors =========*/
+     --hue-color: 37;      /*purple 250 - Green 142 - Blue 230 - Pink 340 */
+
+         /*HSL color mode*/
+     --first-color: #533549;    /* hsl(var(--hue-color), 46%, 14%);      /*hsl(var(--hue-color), 30%, 8%);*/ 
+     --input-color: #FFF; 
+     --form-color: hsl(320, 15%, 50%);   /*hsl(var(--hue-color), 30%, 50%);  /*#F6B042;*/
+     --box-shadow: hsl(320, 22%, 15%);
+
+    /*--========================Font and typography========================*/
+  --body-font: 'Poppins', sans-serif; /* Check google fonts  */
+  --title: 'Gypsy Curse';
+
+/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+--bigger-font-size: 3rem;
+--big-font-size: 2rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1.125rem;
+--normal-font-size: .938rem;
+--small-font-size: .813rem;
+--smaller-font-size: .75rem; 
+
+     /*===========  Font weight======*/
+--font-medium: 500;
+--font-semi-bold: 600; 
+
+ /*=========== Margins Bottom =========*/
+     /* .25rem = 4px, .5rem = 8px, .75rem = 12px ...  */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;    
+}
+
+/*@media screen and (min-width: 968px) {
+    :root{
+      --big-font-size: 3rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+}*/
+
+html {
+    font-family: sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} /*  To remove the natural increasing and decreasing feature(buttons in input number) of input "number"  */
+
+body{  
+   background-color: var(--first-color);  
+   /* margin: 10rem 5rem 5rem 15rem; */
+   /* width: 50%; */
+   /* max-width: 800px; */
+    /* min-width: 480px; */
+    margin: 0 auto;
+}
+
+h1 {
+   font-family: GypsyCurse-epqximport;
+   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+   font-size: var(--big-font-size);
+} 
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1, a{
+    margin-left: 4rem;
+    margin-top: 3rem;
+}
+
+.top{
+    z-index: fixed;
+}
+
+.form{
+    background-color: var(--form-color);
+    text-align: center;
+    display: block;
+    position: absolute;
+    height: 29rem;
+    width: 22rem;
+    padding-top: 5rem;
+    border-radius: var(--mb-3);
+    box-shadow: -50px 50px 58px var(--box-shadow);
+    margin-top: 4.5rem;
+}
+
+p{
+    display: inline;
+}
+
+.form, p, span{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+
+}
+
+.number001, .number002, .number003, .number004{
+    border-radius: .2rem;
+    height: var(--mb-2);
+    width: var(--mb-2);
+    text-align: center;
+}
+
+
+#submit{ 
+    margin-top: var(--mb-3);
+    border-radius: var(--mb-2);
+    height: 2rem;
+    background-color: hsl(320, 15%, 70%);
+    width: 7.5rem;
+}
+
+.submit{
+    display: inline;
+} 
+
+
+.lastResult {
+    color: white;
+    padding: 3px;
+}
+
+
+
+
+            /*============== FOR DIFFERENT SIZES OF DEVICES ===============*/
+            /* For small devices */
+ @media screen and (max-width: 350px) {
+body{
+    margin-top: 2rem;
+}
+
+.form{
+        height: 21rem; 
+        width: 14rem;
+        box-shadow: -15px 15px 18px var(--box-shadow);
+        margin: auto;
+        padding-top: 1.1rem;
+}
+h1{
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+
+
+h1, a{
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+}
+
+.number001, .number002, .number003, .number004{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+p, label{
+    font-size: .8rem;
+}
+
+.resultParas >p{
+    font-size: .5rem;
+    margin-top: 0;
+}
+
+#submit{ 
+    margin-top: 1rem;
+    border-radius: var(--mb-2);
+    height: 1.5rem;
+    background-color: hsl(320, 15%, 70%);
+    width: 6rem;
+    margin-bottom: 0;
+}
+} 
+
+@media screen and (min-width: 351px) and (max-width: 538px){
+body{
+    margin-top: 2rem;
+}
+
+    .form{
+        padding-top: 1.1rem;
+        height: 24rem;
+        width: 19rem;
+    }
+
+    h1{
+        margin-top: 1rem;
+        margin-bottom: .6rem;
+    }
+    
+    a{
+        margin-top: 0;
+    }
+
+    #submit{
+        margin-top: .8rem;
+        margin-bottom: .5rem;
+    }
+
+    .resultParas >p{
+        font-size: .85rem;
+    }
+} 
+
+/* For medium devices */
+@media screen and (min-width: 539px) {
+.form{
+    height: 22rem;
+     padding-top: 1.1rem;   
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+a, h1{
+    margin-top: 1rem;
+    margin-bottom: .35rem;
+}
+
+.resultParas > p{
+    font-size: .85rem;
+    margin-top: .4rem;
+}
+
+#submit{
+    margin-top: 1rem;
+    margin-bottom: .2rem;
+}
+}
+
+@media screen and (min-width: 768px){
+ .form{
+    height: 40rem;
+    padding-top: 5rem;   
+    width: 30rem;
+}
+
+h1{
+   font-size: 3rem;
+}
+
+label{
+    font-size: 1.4rem;
+}
+
+.number001, .number002, .number003, .number004{
+    height: 2.5rem;
+    width: 2.5rem
+}
+
+.resultParas >p{
+    font-size: 1.5rem;
+}
+
+#submit{
+    display: block;
+    margin-top: 2rem;
+    margin-left: 12rem;
+    height: 2.5rem;
+    width: 7.5rem;
+}
+    
+}
+
+
+/* For large devices */
+@media screen and (min-width: 1024px){
+  .form{
+    height: 25rem;
+    width: 27rem;
+    padding-top: 3rem;
+  }
+
+  .resultParas >p{
+    font-size: 1rem;
+  }
+
+  #submit{
+    margin-top: 1rem;
+  }
+
+  label{
+    font-size: 1.2rem;
+  }
+}
